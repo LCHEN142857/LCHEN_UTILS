@@ -30,9 +30,6 @@ PROJECT_NAME = sys.argv[1]
 GROUP_NAME = sys.argv[2]
 ENTITY_NAME_LIST = sys.argv[3]
 
-# validate params
-# TODO
-
 # define constants
 MAIN_PATH = os.path.join('src', 'main')
 JAVA_PATH = os.path.join(MAIN_PATH, 'java')
@@ -43,10 +40,12 @@ SERVICE = 'service'
 IMPL = 'impl'
 SERVICE_IMPL_RELATIVE_PATH = os.path.join(SERVICE, IMPL)
 RESOURCES_PATH = os.path.join(MAIN_PATH, 'resources')
-MYBATIS_CONFIG_TEMPLATE = 'mybatis-config.xml'
-APPLICATION_PROPERTIES_TEMPLATE = 'application.properties'
-POM_TEMPLATE = 'pom.xml'
+WORK_DIRECTORY = 'create_mvc_spring_quickly'
+MYBATIS_CONFIG_TEMPLATE = os.path.join(WORK_DIRECTORY, 'mybatis-config.xml')
+APPLICATION_PROPERTIES_TEMPLATE = os.path.join(WORK_DIRECTORY, 'application.properties')
+POM_TEMPLATE = os.path.join(WORK_DIRECTORY, 'pom.xml')
 
+permission = 0o666
 
 group_path = ''
 
@@ -83,18 +82,17 @@ file.close()
 for layer in [MAPPER]:
     complete_path = os.path.join(PROJECT_NAME, RESOURCES_PATH, layer)
     os.makedirs(complete_path, exist_ok=True)
-    # TODO generate mapper.xml files
 
-application_file = os.path.join(PROJECT_NAME, RESOURCES_PATH, APPLICATION_PROPERTIES_TEMPLATE)
-shutil.copyfile(APPLICATION_PROPERTIES_TEMPLATE, application_file)
+properties_path = os.path.join(PROJECT_NAME, RESOURCES_PATH, 'application.properties')
 
-mybatis_file = os.path.join(PROJECT_NAME, RESOURCES_PATH, MYBATIS_CONFIG_TEMPLATE)
-shutil.copyfile(MYBATIS_CONFIG_TEMPLATE, mybatis_file)
+shutil.copy(APPLICATION_PROPERTIES_TEMPLATE, properties_path)
 
-pom_file = os.path.join(PROJECT_NAME, POM_TEMPLATE)
-shutil.copyfile(POM_TEMPLATE, pom_file)
+mybatis_config_path = os.path.join(PROJECT_NAME, RESOURCES_PATH, 'mybatis-config.xml')
+shutil.copy(MYBATIS_CONFIG_TEMPLATE, mybatis_config_path)
 
-# TODO sed -i demo in template file to user's value
+pom_path = os.path.join(PROJECT_NAME, 'pom.xml')
+shutil.copy(POM_TEMPLATE, pom_path)
+
 
 
 
