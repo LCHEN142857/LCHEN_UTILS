@@ -1,3 +1,5 @@
+参考本地项目“AutoSpringBootDemo”
+
 excel中设置sheet页，作为自定义输入参数来源：
 project: 项目名称（父目录），group名称（包名）等
 dependencies: 定义模板中软件依赖包的版本，提供默认可用版本
