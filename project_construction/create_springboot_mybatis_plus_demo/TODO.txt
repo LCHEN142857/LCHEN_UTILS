@@ -7,3 +7,4 @@ beans: 需要哪些bean生成对应的文件
 
 校验命令行参数、校验Excel输入参数，用正则限定输入格式
 
+打包成Windows、Linux、MacOS三种平台的可执行文件
