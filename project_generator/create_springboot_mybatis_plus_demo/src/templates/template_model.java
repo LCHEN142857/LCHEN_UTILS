@@ -8,7 +8,5 @@ import java.io.Serializable;
 @Getter
 @Setter
 public class {model_name_upper_camel} {
-    private String id;
-    private String username;
-    private String birthDate;
+    private String {column_camel_1};
 }

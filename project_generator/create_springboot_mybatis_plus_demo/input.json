@@ -1,7 +1,7 @@
 {
     "project": {
-        "project_name": "",
-        "group_id": ""
+        "project_name": "demo",
+        "group_id": "org.example"
     },
     "database": [
         {
@@ -11,16 +11,15 @@
             "password": "ps123",
             "table_name": "",
             "columns": {
-                "column_1": "",
-                "column_2": "",
-                "column_3": ""
+                "column_1": ""
             }
         }
     ],
     "dependencies": {
-        "java_version": "",
-        "springboot_version": "",
-        "springboot_myabtis_version": "",
-        "mybatis_plus_version": ""
-    }
+        "java_version": "1.8",
+        "springboot_version": "2.3.2.RELEASE",
+        "springboot_myabtis_version": "2.2.0",
+        "mybatis_plus_version": "3.1.2"
+    },
+    "beans": []
 }

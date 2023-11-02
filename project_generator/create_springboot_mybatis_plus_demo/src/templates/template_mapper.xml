@@ -3,11 +3,9 @@
 <mapper namespace="{group_id}.dao.mapper.{model_name_upper_camel}Mapper">
     <resultMap id="BaseResultMap" type="{group_id}.dao.model.{model_name_upper_camel}">
         <result column="{column_1}" jdbcType="VARCHAR" property="{column_camel_1}"/>
-        <result column="{column_2}" jdbcType="VARCHAR" property="{column_camel_2}"/>
-        <result column="{column_3}" jdbcType="VARCHAR" property="{column_camel_3}"/>
     </resultMap>
     <sql id="Base_Column_List">
-        {column_1}, {column_2}, {column_3}
+        {column_list}
     </sql>
     <select id="getAll" resultMap="BaseResultMap">
         SELECT

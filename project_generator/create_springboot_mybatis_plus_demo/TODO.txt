@@ -1,1 +1,6 @@
 打包成Windows、Linux、MacOS三种平台的可执行文件
+
+对于用户输入的项目名称转换为大驼峰命名：
+如果是没有分隔的单词，例如: autogeneratordemo ，则直接将首字母大写， 即 autogeneratordemo
+如果是有分隔的单词，例如：auto generator demo, auto_generator_demo, auto-generator-demo则都会安装大驼峰命名规则生成，即 
+AutoGeneratorDemo
