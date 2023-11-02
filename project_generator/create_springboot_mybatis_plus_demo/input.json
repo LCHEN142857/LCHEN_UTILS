@@ -1,0 +1,26 @@
+{
+    "project": {
+        "project_name": "",
+        "group_id": ""
+    },
+    "database": [
+        {
+            "database_host_port": "localhost:5432",
+            "cust_database": "testdb",
+            "username": "postgres",
+            "password": "ps123",
+            "table_name": "",
+            "columns": {
+                "column_1": "",
+                "column_2": "",
+                "column_3": ""
+            }
+        }
+    ],
+    "dependencies": {
+        "java_version": "",
+        "springboot_version": "",
+        "springboot_myabtis_version": "",
+        "mybatis_plus_version": ""
+    }
+}
