@@ -9,8 +9,8 @@ Demo
       |     |__bean
       |     |__controller
       |     |__dao
-      |	    |__mapper
-      |	    |__model
+      |	       |__mapper
+      |	       |__model
       |     |__service
       |        |__impl
       |     |__DemoApplication.java

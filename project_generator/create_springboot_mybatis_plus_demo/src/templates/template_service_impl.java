@@ -15,7 +15,7 @@ public class {model_name_upper_camel}ServiceImpl implements {model_name_upper_ca
 
     @Override
     public List<{model_name_upper_camel}> getAll{model_name_upper_camel}s() {
-        return {model_name_lower_camel}Mapper.getAll{model_name_upper_camel}s();
+        return {model_name_lower_camel}Mapper.getAll();
     }
 
     @Override

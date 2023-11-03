@@ -8,5 +8,5 @@ import java.util.List;
 
 @Mapper
 public interface {model_name_upper_camel}Mapper extends BaseMapper<{model_name_upper_camel}> {
-    List<{model_name_upper_camel}> getAll{model_name_upper_camel}s();
+    List<{model_name_upper_camel}> getAll();
 }
