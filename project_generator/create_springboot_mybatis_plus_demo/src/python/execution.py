@@ -5,9 +5,8 @@ import pathlib
 
 def get_upper_camel_case(varname):
     # TODO validate illegal string and length by regex
-    # TODO 分割字符串，以空格或下划线或者中横线或斜杠或反斜杠为分隔符（_ -\/）
+    # TODO 分割字符串，分隔符【_ -\/】
     words = varname.split('\\') if '\\' in varname else varname.split('/')
-    # 单词的首字母大写
     words = [word.capitalize() for word in words]
     return ''.join(words)
 
@@ -51,7 +50,6 @@ if __name__ == '__main__':
 
     for layer in [BEAN, CONTROLLER, DAO_MAPPER_RELATIVE_PATH, DAO_MODEL_RELATIVE_PATH, SERVICE, SERVICE_IMPL_RELATIVE_PATH]:
         complete_path = os.path.join(PACKAGE_PATH, layer)
-        # TODO 删除这个建目录的步骤直接建文件
         os.makedirs(complete_path, exist_ok=True)
         filename = os.path.join(complete_path, '{}.java'.format(get_upper_camel_case(layer)))
         file = open(filename, 'w')
