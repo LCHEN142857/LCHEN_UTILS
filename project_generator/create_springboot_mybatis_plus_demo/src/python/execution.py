@@ -45,10 +45,12 @@ if __name__ == '__main__':
     DAO_MAPPER_RELATIVE_PATH = os.path.join(DAO, MAPPER)
     DAO_MODEL_RELATIVE_PATH = os.path.join(DAO, MODEL)
     RESOURCES_PATH = os.path.join(MAIN_PATH, 'resources')
+    SQL_PATH = os.path.join(RESOURCES_PATH, 'sql')
     APPLICATION_PROPERTIES_TEMPLATE = os.path.join(RESOURCES_PATH, 'application.properties')
     POM_TEMPLATE = os.path.join(PROJECT_PATH, 'pom.xml')
 
-    for layer in [BEAN, CONTROLLER, DAO_MAPPER_RELATIVE_PATH, DAO_MODEL_RELATIVE_PATH, SERVICE, SERVICE_IMPL_RELATIVE_PATH]:
+    for layer in [BEAN, CONTROLLER, DAO_MAPPER_RELATIVE_PATH, DAO_MODEL_RELATIVE_PATH, SERVICE,
+                  SERVICE_IMPL_RELATIVE_PATH]:
         complete_path = os.path.join(PACKAGE_PATH, layer)
         os.makedirs(complete_path, exist_ok=True)
         filename = os.path.join(complete_path, '{}.java'.format(get_upper_camel_case(layer)))
