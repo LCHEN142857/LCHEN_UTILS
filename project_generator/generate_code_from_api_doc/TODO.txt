@@ -1,0 +1,2 @@
+LCHEN_UTILS项目新增生成pojo类、mapper、service、mapperXML、DDL的SQL等。入参有csv或Excel文件，根据接口文档字段生成。
+因为很多文档的字段不一样，比如有的叫en_name,有的叫column，有的叫“字段”，所以把这部分也做成配置化的或者用户输入
